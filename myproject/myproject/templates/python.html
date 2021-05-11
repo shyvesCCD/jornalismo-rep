@@ -1,0 +1,203 @@
+{% load cms_tags menu_tags sekizai_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>{% page_attribute "page_title" %}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+  {% render_block "css" %}
+  <!-- =======================================================
+  * Template Name: BizLand - v1.2.1
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="/">WikiJour</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          {% show_menu 0 100 100 100 %}  
+          <li class="drop-down"><a>Navegação</a>
+            <ul>
+              <li><a href="#python">Python</a></li>
+              <li><a href="#numpy">NumPy</a></li>
+              <li><a href="#pandas">Pandas</a></li>
+              <li><a href="#matplotlib">Matplotlib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1><span>Python</span>
+      </h1>
+      <h2>Aqui teremos a parte de Python</h2>
+      <div class="d-flex">
+        <a href="#featured-services" class="btn-get-started scrollto">Vamos começar!</a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+  <main id="main">
+
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Linguagem de programação Python.</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3 id="python">Porque estudar Python?</h3>
+            <p id="conteudo">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis illo laborum quasi adipisci, natus qui beatae nihil aperiam enim distinctio soluta, explicabo earum facere. Provident ullam neque totam est a.
+              <br>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perferendis ratione in dolor, rem suscipit totam autem voluptatum error tempora dolorem incidunt corporis voluptatem provident adipisci nisi quae eius consequatur.
+              </strong>
+
+              <h3 id="numpy">NumPy</h3>
+              <p>
+              Numpy é uma bibliotecamuito utilizadapara computação científica e análise de dados utilizando Python. Por meio dela é possível trabalhar com arrays, álgebra linear, matrizes e mais.
+                <br>
+                No Python já existe uma estrutura de comportamento similar  ao array: a lista.  No entanto, os arrays de Numpy apresentam um processamento muito mais rápido que a lista, sendo assim, uma escolha muito interessante para sistemas que exijam um bom desempenho.
+                <br>
+                <a href="https://numpy.org/install/">
+                  Instalação do numpy.
+                </a>
+              </p>
+
+              <p>Obs: os exemplos a seguir foram realizados no shell do Python3</p>
+              <p>Para utilizar  esse pacote, devemos importar por meio de:</p>
+              <img src="{% static 'assets/np1.png' %}" style="width: 30rem;">
+              <p>A peça fundamental do numpy são os N-dimensional array, também chamados de ndarrays, que permite você realizar operações de forma rápida e flexível em conjuntos de dados.Dados esses que podem ser inteiros, floats, booleanos, strings, números complexos e muitos outros</p>
+              <p>Podemos utilizar  conjuntos de dados como listas para criar  ndarrays.No seguinte código, criamos um array de 4 elementos, sendo eles 123,  454,  434  e 12.</p>
+              <img src="{% static 'assets/np2.png' %}" alt="Foto 2 Numpy" style="width: 30rem;">
+              <p>Para armazenar o array em uma variável, basta atribuí-lo:</p>
+              <img src="{% static 'assets/np3.png' %}" alt="Foto 3 numpy" style="width: 30rem;">
+              <p>Além disso, como é autoexplicativo no nome, podemos ter múltiplas  dimensões nesse array. Por exemplo:</p>
+              <p>2 dimensões:</p>
+              <img src="{% static 'assets/np4.png' %}" alt="Foto 4 numpy" style="width: 30rem;">
+              <p>3 dimensões:</p>
+              <img src="{% static 'assets/np5.png' %}" alt="Foto 5 numpy" style="width: 30rem;">
+              <p>Também podemos iniciarum array sem necessitar de uma lista. Por exemplo:Array de zeros com 2 linhas e 3 colunas:</p>
+              <img src="{% static 'assets/np6.png' %}" alt="Foto 6 numpy" style="width: 30rem;">
+              <p>Array de uns com 4 linhas e 2 colunas:</p>
+              <img src="{% static 'assets/np7.png' %}" alt="Foto 7 numpy" style="width: 30rem;">
+              <p>Array de zeros com 3 linhas, 4 colunas e 2 repetições disso (3 dimensões):</p>
+              <img src="{% static 'assets/np8.png' %}" alt="Foto 8 numpy" style="width: 30rem;">
+              <p>Array com 10  elementos, de 0 a 9:</p>
+              <img src="{% static 'assets/np9.png' %}" alt="Foto 9 numpy" style="width: 30rem;">
+              <p>Array de 4 números aleatórios:</p>
+              <img src="{% static 'assets/np10.png' %}" alt="Foto 10 numpy" style="width: 30rem;">
+              <p>É possível realizar operações aritméticas com arrays, como adição, subtração, multiplicação  e muitas outras</p>
+              <img src="{% static 'assets/np11.png' %}" alt="Foto 11 numpy" style="width: 30rem;">
+              <p>Note que as operações realizadas não são operações de matrizes de álgebra linear.De forma similar  a listas em Python, podemos acessar dadosde arrayspor meio de índicese slices:</p>
+              <img src="{% static 'assets/np12.png' %}" alt="Foto 12 numpy" style="width: 30rem;">
+              <p>No Numpy existem diversos métodos matemáticos e estatísticos. No seguinte exemplo foi feita a média, o desvio padrão e a soma de a:</p>
+              <img src="{% static 'assets/np13.png' %}" alt="Foto 13 numpy" style="width: 30rem;">
+              <p>Também é possível utilizar  cálculos  de álgebra linear. No exemplo a seguir foi realizada a multiplicação  de matrizes de álgebra linear:</p>
+              <img src="{% static 'assets/np14.png' %}" alt="Foto 14 numpy" style="width: 30rem;">
+              <p>Para guardar um array gerado para futuros usos,é possível armazená-lo em um arquivo npy. No exemplo, o array a é salvo em um arquivo chamado nome_array:</p>
+              <p>Também podemos salvar  arrays por meio de:</p>
+              <code>np.save(‘nome_array’, a)</code>
+              
+              <p>Além disso, ao invésde colocarmos  manualmente os dados em linhas  de código, podemos obtê-los por meio de leitura de arquivos. Dado um arquivo texto, podemos ler os dados e armazenar em um array para, então, trabalhar com eles.</p>
+              <img src="{% static 'assets/np15.png' %}" alt="Foto 15 numpy" style="width: 30rem;">
+
+              <p>Lista de exercícios de Numpy: <a href="https://www.w3resource.com/python-exercises/numpy/index.php">link.</a></p>
+    
+
+              <h3 id="pandas">Pandas</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corrupti cumque laborum obcaecati velit perspiciatis ratione. Deleniti mollitia dolorem molestias molestiae itaque minima, ducimus unde, illo explicabo repudiandae quam dignissimos?</p>
+
+              <h3 id="matplotlib">Matplotlib</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ab obcaecati expedita veritatis molestiae. Quasi vero, optio veritatis debitis esse eius dolores. Doloribus temporibus, quasi in aliquid doloremque dolor nisi.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tenetur sequi assumenda ullam a dolorem, expedita voluptatum laboriosam, porro minus commodi, odio earum ab omnis fuga nulla odit aliquid blanditiis.</p>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Sobre o site</h2>
+          <p>Este site foi desenvolvido na disciplina de Tópicos avançados em Computadores.</p>
+        </div>
+
+        <div class="row">
+         
+          <div class="col-lg-12 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3>Com o intuito de ajudar alunos/jornalistas do curso de Jornalismo na Universidade de Brasília.</h3>
+            
+            <p>
+              Estaremos disponibilizando tutoriais de ferramentas comuns no dia a dia trabalhando com a área de Ciência de dados. 
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

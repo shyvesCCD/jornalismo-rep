@@ -1,0 +1,187 @@
+{% load cms_tags menu_tags sekizai_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>{% page_attribute "page_title" %}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+  {% render_block "css" %}
+  <!-- =======================================================
+  * Template Name: BizLand - v1.2.1
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="/">WikiJour</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          {% show_menu 0 100 100 100 %}  
+          <li class="drop-down"><a>Navegação</a>
+            <ul>
+              <li><a href="#conteudo-R">R</a></li>
+              <li><a href="#RStudio">RStudio</a></li>
+              <li><a href="#Ggplot2">Ggplot2</a></li>
+              <li><a href="#dplyr">Dplyr</a></li>
+              <li><a href="#video">Vídeo</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1><span>R</span>
+      </h1>
+      <h2>Aqui teremos a parte de R</h2>
+      <div class="d-flex">
+        <a href="#featured-services" class="btn-get-started scrollto">Vamos começar!</a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Featured Services Section ======= -->
+
+    <!-- ======= About Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Linguagem de programação R.</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3 id="conteudo-R">Para que serve o R?</h3>
+            <p>
+              R é uma linguagem de programação multi-paradigma, ou seja,
+              podemos utilizar princípios tanto do paradigma funcional, sequencial e o orientado a objetos.
+              <br>
+              Porém o R brilha mesmo é na parte estátistica, com pacotes que facilitam muito na hora de desenvolver.
+              Aqui nesse site vou abordar principalmente sobre o <strong>ggplot2</strong> e sobre o <strong>
+                dplyr.
+              </strong>
+            </p>
+
+             <h3 id="RStudio">R Studio</h3>
+             <p>
+               Para melhorar sua experiência com a linguagem R recomendamos a utilização
+               do ambiente de desenvolvimento R Studio.
+               <br>
+               Conseguimos aproveitar melhor dos pacotes para R dentro dessa IDE, por possuir uma parte para download de
+               packages e até visualização dos dados que você importar.
+               <br>
+               Primeiro você terá que instalar a linguagem R no seu computador, podemos encontrar aqui neste
+               <a href="https://cran.r-project.org/bin/windows/base/">link</a> o download pra Windows. E para fazermos
+               download da IDE, R Studio, podemos encontrar neste 
+               <a href="https://www.rstudio.com/products/rstudio/download/">link</a>
+               também para qualquer sistema operacional que você esteja usando.
+               A interface quando a gente instala o R Studio é bem parecido com isso:
+               <img src="{% static 'assets/img/rimage.png' %}" alt="foto do r" id="imagem">
+             </p>
+
+             <h3 id="Ggplot2">Ggplot2</h3>
+             <p>Ggplot2 é um pacote para visualização de dados dentro da linguagem estátistica R.</p>
+             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, dolor veniam dolorum possimus corrupti incidunt pariatur quas rerum, quos ipsum ea accusamus, rem alias aut unde id quidem quae sunt!</p>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi! Recusandae facere odit deserunt. Iure qui itaque quasi odio doloribus. Corporis rerum asperiores tempora? Commodi harum optio cumque deserunt laborum.</p>
+             <br>
+             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa quaerat dolores beatae nihil laudantium numquam ab quis, repellat delectus recusandae odio et quas laboriosam non, veritatis rerum, perferendis at dicta?</p>
+            
+             <h3 id="dplyr">Dplyr</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed suscipit natus ad voluptatibus totam praesentium porro in laborum odit doloribus eos veniam, perspiciatis optio quibusdam voluptate corporis iste mollitia officia.
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, odio molestiae explicabo deserunt itaque adipisci error ex excepturi. Fugit consectetur, quibusdam asperiores cum molestias ea architecto nisi doloremque quidem maiores.
+               <br>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quam dolore velit explicabo ex quidem libero rerum dolor, assumenda debitis porro earum? Libero quia non quis hic ducimus velit mollitia.
+             </p>
+             <h3 id="video">Vídeo Explicativo sobre R.</h3>
+             <video width="100%" height="400px" controls>
+               <source src="{% static 'assets/videoSobreR.mp4' %}" type="video/mp4"> 
+             </video>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Sobre o site</h2>
+          <p>Este site foi desenvolvido na disciplina de Tópicos avançados em Computadores.</p>
+        </div>
+
+        <div class="row">
+         
+          <div class="col-lg-12 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3>Com o intuito de ajudar alunos/jornalistas do curso de Jornalismo na Universidade de Brasília.</h3>
+            
+            <p>
+              Estaremos disponibilizando tutoriais de ferramentas comuns no dia a dia trabalhando com a área de Ciência de dados. 
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
