@@ -139,12 +139,74 @@
               
               <p>Além disso, ao invésde colocarmos  manualmente os dados em linhas  de código, podemos obtê-los por meio de leitura de arquivos. Dado um arquivo texto, podemos ler os dados e armazenar em um array para, então, trabalhar com eles.</p>
               <img src="{% static 'assets/np15.png' %}" alt="Foto 15 numpy" style="width: 30rem;">
-
-              <p>Lista de exercícios de Numpy: <a href="https://www.w3resource.com/python-exercises/numpy/index.php">link.</a></p>
+              <p style="margin-top: 1rem;">Lista de exercícios de Numpy: <a href="https://www.w3resource.com/python-exercises/numpy/index.php">link.</a></p>
     
 
               <h3 id="pandas">Pandas</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corrupti cumque laborum obcaecati velit perspiciatis ratione. Deleniti mollitia dolorem molestias molestiae itaque minima, ducimus unde, illo explicabo repudiandae quam dignissimos?</p>
+              <p>O Pandas é uma biblioteca de Python montada com base no Numpy que contém estruturas de dados de alto-nível e ferramentas que permitem a análise de dados de forma fácil  e rápida.Para tal, o Pandas oferece estruturas e operações para manipular tabelas.</p>
+
+              <p>Instalação do Pandas: <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">link.</a> </p>
+
+              <p>Para importar a biblioteca é necessário ter a linha:</p>
+              <img src="{% static 'assets/pd1.png' %}" alt="Foto sobre o pandas" style="width: 30rem;">
+
+              <h5>As duas estruturas de dados mais relevantes dessa biblioteca são: Series e DataFrame.</h5>
+
+              <p>Series é um array de umadimensão que contém qualquer tipo de dado existente no Numpy e que cada elemento é localizado  por um índice, de forma similar as listas do Python.No exemplo é criada  uma Series de 4 elementos. Podemos ver os valores por meio de values e como o índice funciona por meio de index</p>
+              <img src="{% static 'assets/pd2.png' %}" alt="Foto dois sobre o pandas" style="width: 30rem;">
+
+              <p>É possível também definir os índices da series. No exemplo estamos criando a series com índices a, b, c e d.</p>
+              <img src="{% static 'assets/pd3.png' %}" alt="Foto tres sobre pandas" style="width: 30rem;">
+
+              <p>Podemos realizar  diversas operações, como filtragens, operações matemáticas e operações lógicas.Tais operações serão detalhadas na seção a seguir.</p>
+
+              <p>O dataframe pode ser interpretado como uma tabela contendo um conjunto de colunas, em que cada uma pode ter um tipo de dados diferente (string, inteiro, float, etc). O dataframe possui tanto um índice de coluna  quanto de linha.</p>
+
+              <p>Assim, como em Series, os valores retornados de dataframe é um ndarray, no entanto, de duas dimensões.</p>
+
+              <p>Existem diversas formas de criar  um dataframe, mas amais comum é por meio de um dicionário  de listas ou arrays de NumPy, todos com o mesmo tamanho.</p>
+
+              <img src="{% static 'assets/pd4.png' %}" alt="Foto quatro sobre pandas" style="width: 30rem;">
+
+              <p>Podemos obter dados de uma coluna acessando por meio do nome das colunas (onde se obtém os dados da coluna) epelo índice (onde se obtém os dados da linha):</p>
+              <img src="{% static 'assets/pd5.png' %}" alt="Foto cinco sobre pandas" style="width: 30rem;">
+
+              <p>Podemos atribuir  valores a colunas por meio de:</p>
+              <img src="{% static 'assets/pd6.png' %}" alt="Foto seis sobre pandas" style="width: 30rem;">
+
+              <p>Outra forma comum de criar dataframes é por meio de dicionários  aninhados, em que as chaves dos dicionários  externos se tornam os nomes dascolunas e as chaves dos dicionários  internos se tornam os índices:</p>
+              <img src="{% static 'assets/pd7.png' %}" alt="Foto sete sobre pandas" style="width: 30rem;">
+
+              <p>Note que como não especificamos um índice 2000 para ‘Nevada’, ao imprimir  o dataframe o valor nesse setor é NaN (Not a Number).</p>
+
+              <p>Entre as ferramentas mais importantes para mexer com series e dataframes, temos:</p>
+              <ul>
+                <li>
+                  Reindex: permite criar  um novo objeto com dados organizados por um novo índice.
+                  <img src="{% static 'assets/pd8.png' %}" alt="Foto oito sobre pandas" style="width: 30rem;">
+                </li>
+                <li>
+                  Drop: permite criar um novo objeto sem índices especificados na chamada.
+                  <img src="{% static 'assets/pd9.png' %}" alt="Foto nove sobre pandas" style="width: 30rem;">
+                </li>
+                <li>
+                  Indexação e filtragem: podemos acessar os elementos por meio dos índices e fazer operações que filtram os dados.<br>
+                  <img src="{% static 'assets/pd10.png' %}" alt="Foto dez sobre pandas" style="width: 30rem;">
+                </li>
+                <li>
+                  Operações aritméticas: podemos realizar operações aritméticas em series e dataframes. O fill_value=0 determina que caso o tamanho dos dataframes sejam diferentes, aqueles valores que o menor não tem devem ser preenchidos com 0. Caso não fosse explicitado, seriam valores NaN. 
+                  <img src="{% static 'assets/pd11.png' %}" alt="Foto onze sobre pandas" style="width: 30rem;">
+                </li>
+              </ul>
+
+              <p>Podemos também salvardataframes e series em arquivos CSVcom o seguinte código:</p>
+              <img src="{% static 'assets/pd12.png' %}" alt="Foto doze sobre pandas" style="width: 30rem;">
+
+              <p>Outra ferramentaimportante depandas é a leitura dearquivos de tabelas, como o csve excel. Com elapodemosarmazenaros valores lidosem um dataframe, de forma que seja fácil  transferir dados de um arquivo de planilhas para um programa Python.</p>
+              <img src="{% static 'assets/pd13.png' %}" alt="foto treze sobre pandas" style="width: 30rem;">
+              <img src="{% static 'assets/pd14.png' %}" alt="foto catorze sobre pandas" style="width: 30rem;">
+
+              <p>Lista de exercícios de Pandas: <a href="https://www.w3resource.com/python-exercises/pandas/index.php">link.</a></p>
 
               <h3 id="matplotlib">Matplotlib</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ab obcaecati expedita veritatis molestiae. Quasi vero, optio veritatis debitis esse eius dolores. Doloribus temporibus, quasi in aliquid doloremque dolor nisi.</p>
