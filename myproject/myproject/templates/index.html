@@ -1,6 +1,5 @@
 {% load cms_tags menu_tags sekizai_tags %}
 {% load static %}
-{% load cms_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,9 +10,6 @@
   <title>{% page_attribute "page_title" %}</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <!-- <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon"> -->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -26,18 +22,12 @@
   <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
   {% render_block "css" %}
-  <!-- =======================================================
-  * Template Name: BizLand - v1.2.1
-  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
+  {% cms_toolbar %}
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
