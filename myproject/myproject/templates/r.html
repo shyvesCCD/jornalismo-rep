@@ -12,7 +12,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <!-- <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon"> -->
+  {% comment %}<link src="{% static 'assets/favicon.icon' %}" rel="favi-icon">{% endcomment %}
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -28,12 +28,6 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
   {% render_block "css" %}
-  <!-- =======================================================
-  * Template Name: BizLand - v1.2.1
-  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -43,8 +37,6 @@
     <div class="container d-flex align-items-center">
 
       <h1 class="logo mr-auto"><a href="/">WikiJour</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -114,23 +106,70 @@
                download da IDE, R Studio, podemos encontrar neste 
                <a href="https://www.rstudio.com/products/rstudio/download/">link</a>
                também para qualquer sistema operacional que você esteja usando.
-               A interface quando a gente instala o R Studio é bem parecido com isso:
+               A interface quando a gente instala o R Studio é bem parecido com isso: <br>
                <img src="{% static 'assets/img/rimage.png' %}" alt="foto do r" id="imagem">
              </p>
 
              <h3 id="Ggplot2">Ggplot2</h3>
              <p>Ggplot2 é um pacote para visualização de dados dentro da linguagem estátistica R.</p>
-             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, dolor veniam dolorum possimus corrupti incidunt pariatur quas rerum, quos ipsum ea accusamus, rem alias aut unde id quidem quae sunt!</p>
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi! Recusandae facere odit deserunt. Iure qui itaque quasi odio doloribus. Corporis rerum asperiores tempora? Commodi harum optio cumque deserunt laborum.</p>
-             <br>
-             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa quaerat dolores beatae nihil laudantium numquam ab quis, repellat delectus recusandae odio et quas laboriosam non, veritatis rerum, perferendis at dicta?</p>
-            
+             <p>Onde o intuito é gerar gráficos de maneira rápida e fácil. Baseado no The Grammar of Graphics, livro de estátistica na computação, o ggplot2 recebe uma entrada de dados e com essa entrada podemos manipular utilizando a biblioteca.</p>
+             <h5>Instalação</h5>
+             <p>Podemos installar da maneira mais fácil que é utilizando o tidyverse: </p>
+             <code>install.packages("tidyverse")</code>
+             <p>Com esse pacote teremos praticamente todas as ferramentas necessárias para manipular dados dentro do R Studio. Ou também podemos installar individualmente:</p>
+             <code>install.packages("ggplot2")</code>
+             <p>E também temos mais uma maneira que será explicado no vídeo no final dessa seção.</p>
+             <h5>Utilização</h5>
+             <p>Bom, o pacote ggplot2 possui muitas funcionalidades para apenas descrever aqui em uma Wiki, porém, temos comandos que quase sempre iremos utilizar, como por exemplo, o comando <code>ggplot()</code> que seguido pode ser combinado com o comando: <code>aes()</code> que serve pra declararmos a estética do nosso gráfico. Exemplo:</p>
+             <code>
+               library(ggplot2) 
+             </code>
+             <code>ggplot(mpg, aes(displ, hwy, colour = class)) +</code>
+             <code>
+               geom_point() 
+             </code>
+             <img src="{% static 'assets/ggplot2.png' %}" alt="gráfico ggplot">            
+             <p>Esse exemplo foi retirado do site do próprio tidyverse que temos aqui: <a href="https://ggplot2.tidyverse.org/">link.</a></p>
+
+             <h5>CheatSeet</h5>
+             <p>Existe um CheatSeet para essa ferramenta que praticamente ilustra todos os comandos que vamos usar no nosso dia a dia com o ggplot2.</p>
+             <div style="display: flex;">
+               <a href="https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf">
+                <img src="{% static 'assets/cheatseet1.png' %}" alt="Foto do cheatSeet" style="width: 30rem;" style="height: 20rem;">
+                <img src="{% static 'assets/cheatseet.png' %}" alt="Foto do cheatSeet continuacao" style="width: 30rem;" style="height: 20rem;">
+               </a>
+             </div>
+             <p>Podemos acessar o repositório do github se clicarmos nas imagens, para visualizarmos melhor o conteúdo.</p>
+
              <h3 id="dplyr">Dplyr</h3>
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed suscipit natus ad voluptatibus totam praesentium porro in laborum odit doloribus eos veniam, perspiciatis optio quibusdam voluptate corporis iste mollitia officia.
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, odio molestiae explicabo deserunt itaque adipisci error ex excepturi. Fugit consectetur, quibusdam asperiores cum molestias ea architecto nisi doloremque quidem maiores.
-               <br>
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quam dolore velit explicabo ex quidem libero rerum dolor, assumenda debitis porro earum? Libero quia non quis hic ducimus velit mollitia.
-             </p>
+             <p>Dplyr é uma biblioteca, ou também chamado de pacote(package), que nós da acesso a maneiras mais fáceis de manipular os dados.</p>
+             <ul>
+               <li><code>select()</code> pegamos uma variável de acordo com o seu nome.</li>
+               <li><code>filter()</code> filtramos os nossos dados baseado em uma condicional.</li>
+               <li><code>summary()</code> reduzimos os nossos dados para apenas uma variável.</li>
+               <li><code>groub_by()</code> onde podemos realizar uma operação para determinado grupo(group).</li>
+             </ul>
+
+             <h5>Instalação</h5>
+             <p>Para instalar o dplyr seguimos a mesma ideia do ggplot2. Assim executando os seguintes comandos no nosso RStudio: </p>
+             <code>install.packages("tidyverse")</code>
+             <code>install.packages("dplyr")</code>
+             <p>Onde usando o tidyverse podemos instalar várias ferramentas de uma vez, ou instalar individualmente essa ferramenta.</p>
+
+             <h5>CheatSeet</h5>
+             <p>Para o dplyr também existe um CheatSeet igual temos para o ggplot2.</p>
+             <div style="display: flex;">
+               <a href="https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf">
+               <img src="{% static 'assets/dplyrCheat.png' %}" alt="Foto do CheatSeet pro dplyr" style="width: 30rem;" style="height: 20rem;">
+               <img src="{% static 'assets/dplyrCheat2.png' %}" alt="Segunda foto do CheatSeet pro dplyr" style="width: 30rem;" style="height: 20rem;">
+               </a>
+             </div>
+
+             <p>Assim como nas fotos do CheatSeet do ggplot2, podemos acessar o repositório do github se clicarmos na imagem.</p>
+
+             <h5>Onde estudar?</h5>
+             <p>Existe um site incrível e gratuito que abrange todas essas ferramentas de maneira mais aprofudada, caso você tenha interesse, podemos encontrar aqui: <a href="https://www.datacamp.com/">link.</a> O datacamp é um site onde oferece treinamentos a respeito da área de Ciência de Dados, podemos encontrar vídeo aulas e também exercícios nessa plataforma.</p>
+
              <h3 id="video">Vídeo Explicativo sobre R.</h3>
              <video width="100%" height="400px" controls>
                <source src="{% static 'assets/videoSobreR.mp4' %}" type="video/mp4"> 

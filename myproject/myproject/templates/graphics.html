@@ -11,9 +11,6 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <!-- <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon"> -->
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -25,12 +22,12 @@
   <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
   {% render_block "css" %}
 </head>
 
 <body>
+  {% cms_toolbar %}
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
@@ -66,7 +63,15 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Linguagem de programação Python.</h2>
+          <h2></h2>
+          <li class="drop-down"><a>Navegação</a>
+            <ul>
+              <li><a href="#python">Python</a></li>
+              <li><a href="#numpy">NumPy</a></li>
+              <li><a href="#pandas">Pandas</a></li>
+              <li><a href="#matplotlib">Matplotlib</a></li>
+            </ul>
+          </li>
         </div>
 
         <div class="row">
