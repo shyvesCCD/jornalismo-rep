@@ -209,7 +209,8 @@ CMS_TEMPLATES = (
     ('r.html', 'RPage'),
     ('python.html', 'pythonPage'),
     ('webscrapper.html', 'webScrapperPage'),
-    ('sobrenos.html', 'sobrenosPage')
+    ('sobrenos.html', 'sobrenosPage'),
+    ('acervo.html', 'acervoPage')
 )
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'

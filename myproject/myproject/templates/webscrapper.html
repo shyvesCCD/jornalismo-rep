@@ -80,11 +80,38 @@
 
         <div class="row">
           <div class="col-lg-12 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <h3>O que é o Web Screpper?</h3>
-            <p>Web scraping é uma técnica de extração de dados utilizada para coletar dados de sites.
-              Por meio de processos automatizados, implementados usando um rastreador bot, esse tipo de “raspagem”
-              de informações é uma forma de realizar cópias de dados em que informações específicas são coletadas e copiadas da web,
-              tipicamente em um banco de dados ou planilha local central, para posterior recuperação ou análise.</p>
+            <h3>Webscraper.io</h3>
+            <p>O webscraper.io é um programa gratuito em forma de plugin, mas que pode ser pago para utilizá-lo em formas mais complexas.Ele permite realizar raspagem de dados de forma simples, apenas clicando  em ícones, textos e outros elementos de páginas HTML. Mais informações acerca dessa ferramenta podem ser vistas pelo seguinte link: <a href="https://webscraper.io/">link.</a></p>
+            <p>Para utilizar  o webscraper.io, é necessário utilizar o navegador Google Chrome e instalar  o plugin no link:
+              <a href="https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn?hl=en">link.</a>
+            </p>
+            <p>Concluída a instalação, seguimos os seguintes passos:</p>
+            <ol>
+              <li>
+                Abra o modo desenvolvedor em uma página web (clique F12). Caso o mododesenvolvedor esteja na vertical, clique no símbolo de três pontos verticais e clique na opção apontada pela seta na imagem: <br>
+                <img src="{% static 'assets/print1.png' %}" alt="Primeiro passo foto" style="width: 30rem;">
+              </li>
+              <li>
+                Com modo desenvolvedor na horizontal, clique em “Web Scraper”, “Create new sitemap” e “Create Sitemap”: <br>
+                <img src="{% static 'assets/print2.png' %}" alt="Segundo passo foto" style="width: 30rem;">
+              </li>
+              <li>
+                Em “Sitemap name” crieum nome para seu sitemap. E em “Start URL” cole o link da página que você deseja raspar. Por fim, clique em “Create Sitemap”.
+              </li>
+              <li>
+                Agora, clique em “Add new selector”. Na caixa de texto “Id”, crie um nome para o seletor que você está criando. Na caixa de texto “Type”, selecione o tipo de dado que será raspado (normalmente é tipo Text). Marque a caixa “Multiple” e clique em “Select”, presente na seção “Selector”.
+              </li>
+              <li>
+                Após clicar  em “Select”, clique em alguns elementos que você queira raspar (geralmente após clicar  em 2, o plugin já reconhece os outros). No exemplo a seguir, desejamos raspar os preços dos livros na página: <br>
+                <img src="{% static 'assets/print3.png' %}" alt="Terceiro passo foto" style="width: 30rem;">
+              </li>
+              <li>
+                Com os elementos agora marcados em vermelho, clique em “Done selecting”. Por fim, clique em “Save selector”. Então, no botão “Data Preview” é possível ver os dados raspados pelo plugin.
+                <p>Caso você queira baixar os dados em formato CSV, clique em “Sitemap *nome do seu Sitemap*” e clique em “Export data as CSV”<br></p>
+                <img src="{% static 'assets/print4.png' %}" alt="Quarto passo foto" style="width: 30rem;">
+              </li>
+              <li>Clique em “Download now!” e pronto, você baixou os dados raspados em formato CSV.</li>
+            </ol>
           </div>
         </div>
 
